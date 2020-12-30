@@ -1,5 +1,6 @@
 package com.haarisiqbal.tippedarrows.listeners;
 
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
@@ -29,8 +30,12 @@ public class Listeners implements Listener {
     
     PotionEffect p = new PotionEffect(PotionEffectType.BLINDNESS, 200, 1);
     
-    LivingEntity l = (LivingEntity) hitEvent.getHitEntity();
-    l.addPotionEffect(p);
+    Entity e = hitEvent.getHitEntity();
+    
+    if (e != null) {
+      LivingEntity l = (LivingEntity) hitEvent.getHitEntity();
+      l.addPotionEffect(p);
+    }
     
   }
   
