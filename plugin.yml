@@ -1,5 +1,5 @@
 name: TippedArrows
-version: 1.2
+version: 1.3
 author: Haaris Iqbal (Volcifire)
 main: com.haarisiqbal.tippedarrows.Main
 description: All arrows shot by skeletons will have a random potion effect.
